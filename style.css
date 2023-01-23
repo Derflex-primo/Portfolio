@@ -34,6 +34,7 @@ button {
 
 .container {
     padding: 50px 0;
+    width: 100%;
 }
  
 .row {
@@ -67,6 +68,26 @@ button {
 
 .click:active {
     transform: scale(0.8);
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    background-color: #a848c5;
+    transition: all 400ms ease;
 }
 
 /*
@@ -218,6 +239,7 @@ LANDING DEO
 
 .piclogo:hover {
     filter: none;
+    transform: scale(1.07);
      
 }
  
@@ -227,7 +249,10 @@ LANDING DEO
     border-radius: 50%;
     filter: grayscale(100%) contrast(120%);
     transition: all 500ms ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
+
+
     
     
 .piclogo1 {
@@ -238,8 +263,44 @@ LANDING DEO
     width: 100%;
     max-width: 1000px;
     padding: 0 30px; 
+    
 }
  
+
+/*
+
+
+MODAL DEO
+
+
+*/
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 700px;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+}
+
+.modal__half {
+    width: 50%;
+}
+
+.modal__about {
+    background-color: rgb(245, 245, 245);
+}
+
+.modal__contact {
+    background-color: #242424;
+    color: #f8f8f8;
+}
 
 /*
 
@@ -249,7 +310,19 @@ PROJECTS DEO
 
 */
 
+
  
+#projects  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__list {
+    padding: 0;
+     
+}
+
 .section__title {
     text-align: center;
     font-size: 38px;
@@ -263,6 +336,11 @@ PROJECTS DEO
   .project__img {
     width: 100%;
     transition: all 600ms ease;
+  }
+
+  .project:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
   }
   
   .project__wrapper {
@@ -327,3 +405,158 @@ PROJECTS DEO
   .project__description--para {
     margin: 16px 0;
   }
+
+  
+/*
+
+
+TESTIMONIALS DEO
+
+
+*/
+
+
+#testimonials {
+    margin-bottom: 100px;
+}
+
+.testimonial__title {
+    font-size: 48px;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 60px;
+}
+
+.testimonial__sub--title {
+    font-weight: 400;
+    letter-spacing: 1.5;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+
+.swiper {
+    margin: 0 auto;
+    width: 1000px;
+    height: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    overflow: hidden;
+    border-radius: 30px;
+     
+}
+
+.swiper-slide {
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   padding-top: 100px;
+   padding-left: 50px;
+   transition: all 1s ease;
+   
+   
+ 
+
+}
+
+.tes1 {
+
+    max-width: 880px;
+    text-align-last: left;
+}
+
+.tes__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2;
+    text-align: left;
+
+
+}
+
+.tes__sub--title {
+    margin-top: 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+ .tes-sub {
+    padding-top: 8px;
+    letter-spacing: 2px;
+    font-weight: 700;
+ }
+
+ .tes__rating {
+    color: #fdcc0d;
+    padding-top: 8px;
+ }
+
+
+ /*
+
+
+FOOTER DEO
+
+
+*/
+
+ 
+
+footer {
+    background-color: #242424;
+    display: flex;
+    padding: 6% 0;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+    width: 90px;
+
+}
+
+.footer__social--list {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around
+
+}
+
+
+.footer__name,
+.footer__links {
+    color: #f8f8f8;
+}
+
+.footer__links {
+    letter-spacing: 1px;
+}
+
+.footer__name {
+    margin-top: 20px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.liver__hover-effect:hover {
+    color: #f8f8f8;
+    text-shadow: 0 0 5px #a848c5,
+                0 0 25px #fdcc0d,
+                0 0 50px #a848c5,
+                0 0 100px #fdcc0d;
+}
+
+.liver__hover-effect {
+    transition: 0.5s;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+  
+}

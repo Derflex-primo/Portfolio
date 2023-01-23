@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOX</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./signatureDeo.js"></script>
+    <script src="./signatureDeo.js" defer></script>
     <script
       src="https://kit.fontawesome.com/87aa5e9b00.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <!--LANDING-->
+
     <section id="landing-page">
       <nav class="landing__page">
         <figure class="landing__logo">
@@ -47,8 +53,8 @@
           <li class="landing__link">
             <a
               href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black "
-              ><i class="fa-solid fa-circle-half-stroke" ></i
+              class="nav__link--anchor liver__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-circle-half-stroke"></i
             ></a>
           </li>
         </ul>
@@ -77,88 +83,392 @@
           <a
             href="https://github.com/Derflex-primo"
             target="_blank"
-            class="social__link click" 
+            class="social__link click"
           >
             <i class="fab fa-github" aria-hidden="true"></i>
           </a>
-          <a href=" " target="_blank" class="social__link click" >
+          <a href=" " target="_blank" class="social__link click">
             <i class="fa-solid fa-file"></i>
           </a>
-        </div> 
-          <figure class="piclogo1 photo">
-              <img src="./assets/Piclogo.jpg"  class="piclogo" alt="">
-          </figure>
+        </div>
+        <figure class="piclogo1 photo">
+          <img src="./assets/Piclogo.jpg" class="piclogo" alt="" />
+        </figure>
       </header>
-      <button class="mail__btn click" >
+      <button class="mail__btn click">
         <i class="fas fa-envelope" aria-hidden="true"></i>
       </button>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <div class="row">
-                <h1 class="section__title">Here are some of my <span class="text-color">Projects</span></h1>
-                <ul class="project__list">
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png"  class="project__img" alt="">
-                            <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Car Sales Project
-                                </h3>
-                                <h4 class='project__description--sub-title'>
-                                    HTML, CSS, JavaScript, React
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sint, ad, debitis, mollitia quae 
-                                    a laborum natus ex non cum dolore? Accusamus incidunt, vel quos iste magni distinctio dolor delectus.
-                                </p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/Derflex-primo" class="project__description--link">
-                                        <i class="fab fa-github" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://github.com/Derflex-primo" class="project__description--link">
-                                        <i class="fas fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./assets/chat.png"  class="project__img" alt="">
-                            <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Chat Black Apple
-                                </h3>
-                                <h4 class='project__description--sub-title'>
-                                    HTML, CSS, JavaScript, React
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sint, ad, debitis, mollitia quae 
-                                    a laborum natus ex non cum dolore? Accusamus incidunt, vel quos iste magni distinctio dolor delectus.
-                                </p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/Derflex-primo" class="project__description--link">
-                                        <i class="fab fa-github" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://github.com/Derflex-primo" class="project__description--link">
-                                        <i class="fas fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+      <div class="modal">
+        <div class="modal__half modal__about">
+            <h3 class="modal__title modal__sub--title">Here's a bit About me</h3>
+            <h4 class="modal__sub-title modal__sub--title">Frontend Developer</h4>
+            <p class="modal__para">
+                A Young individual who developed visually stunning, intuitive, and responsive websites that deliver optimal user experience.
+            </p>
         </div>
+        <div class="modal__half modal__contact">Let's have a chat</div>
+      </div>
     </section>
-   
 
+    <!--PROJECTS-->
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="text-color">Projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eos sint, ad, debitis, mollitia quae a laborum natus ex non
+                    cum dolore? Accusamus incidunt, vel quos iste magni
+                    distinctio dolor delectus.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Derflex-primo"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Derflex-primo"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/chat.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Chat Black Apple</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eos sint, ad, debitis, mollitia quae a laborum natus ex non
+                    cum dolore? Accusamus incidunt, vel quos iste magni
+                    distinctio dolor delectus.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Derflex-primo"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Derflex-primo"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--TESTIMONIAL-->
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <h4 class="testimonial__sub--title">Hear from collegues & clients</h4>
+          <h1 class="testimonial__title">
+            <span class="text-color"> Testimonials </span>
+          </h1>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="tes1 tes__title">
+                  <em>
+                    "Daryl quickly understood my needs and proposed a solution
+                    in line with my wishes. He kept me up to date with the
+                    development progress by asking my opinion each time. The
+                    final product met my expectations. I highly recommend him
+                    and would use his services in the future."
+                  </em>
+                </h3>
+                <h4 class="tes1 tes__sub--title">
+                  <b class="text-color">David Bragg</b>
+                </h4>
+                <h5 class="tes-sub">Founder of FES</h5>
+                <div class="tes1 tes__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    </section>
+    <footer>
+      <div class="container footer__container">
+        <div class="row footer__row">
+        <figure class="footer-img">
+          <img
+            src="./assets/DOX__2_-removebg-preview.png"
+            alt=""
+            class="footer__logo"
+          />
+        </figure>
+        <div class="footer__social--list">
+            <a href="#" class="
+            footer__links
+            liver__hover-effect
+            liver__hover-effect--white
+            ">Linkedin</a>
+            <a href="#" class="
+            footer__links
+            liver__hover-effect
+            liver__hover-effect--white
+            ">GitHub</a>
+            <a href="#" class="
+            footer__links
+            liver__hover-effect
+            liver__hover-effect--white
+            ">Email</a>
+            <a href="#" class="
+            footer__links
+            liver__hover-effect
+            liver__hover-effect--white
+            ">Resume</a>
+      </div>
+        <h4 class="footer__name">Daryl Deogracias</h4>
+    </div>
+      </div>
+    </footer>
   </body>
 </html>
