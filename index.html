@@ -15,6 +15,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+   </script>
+   <script src="./email.js" defer></script>
+   <script type="text/javascript">
+   (function(){
+      emailjs.init("I3mTYfDDoKcfMkFaN");
+   })();
+   </script>
   </head>
   <body>
     <!--LANDING-->
@@ -95,7 +104,7 @@
           <img src="./assets/Piclogo.jpg" class="piclogo" alt="" />
         </figure>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fas fa-envelope" aria-hidden="true"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -103,13 +112,71 @@
       </a>
       <div class="modal">
         <div class="modal__half modal__about">
-            <h3 class="modal__title modal__sub--title">Here's a bit About me</h3>
-            <h4 class="modal__sub-title modal__sub--title">Frontend Developer</h4>
-            <p class="modal__para">
-                A Young individual who developed visually stunning, intuitive, and responsive websites that deliver optimal user experience.
-            </p>
+          <h3 class="modal__title modal__title--about">Here's a bit About me</h3>
+          <h4 class="modal__sub-title modal__sub--title">Frontend Sofware Developer</h4>
+          <p class="modal__para">
+            A Young individual who developed
+            <b class="text-color"> visually stunning, intuitive, and responsive websites </b>
+            that deliver optimal
+            <b class="text-color">user experience.</b>
+            <br />
+            I currently work on extremely difficult engineering problems and
+            learn from a team consisting of some of the most 
+            <b class="text-color">talented </b>
+            and <b class="text-color">experienced</b>
+             software engineers every day.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/CSS.png" alt="">
+               <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/CSS.webp" alt="">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/jsscrpit.webp" alt="">
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/react.webp" alt="">
+              <span class="language__name">React</span>
+            </figure>
+          </div>
         </div>
-        <div class="modal__half modal__contact">Let's have a chat</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h4 class="modal__sub--title modal__sub-title--contact">
+            I Love to hear from You
+          </h4>
+          <form action="" id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label   class="form__item--label">Name</label>
+              <input type="text" name="user_name" class="input"  required></input> 
+            </div>
+            <div class="form__item">
+              <label  class="form__item--label">Email</label>
+              <input type="email" name="user_email" class="input"  required></input>
+            </div>
+            <div class="form__item">
+              <label   class="form__item--label">Message</label>
+              <textarea type="text" name="message" class="input"  required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send
+            </button>     
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+             <img class="planetload planet-spinner" src="./assets/galaxy.png" alt="">
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            It's a pleasure! Looking forward to speaking to you soon.
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
 
@@ -437,37 +504,37 @@
     <footer>
       <div class="container footer__container">
         <div class="row footer__row">
-        <figure class="footer-img">
-          <img
-            src="./assets/DOX__2_-removebg-preview.png"
-            alt=""
-            class="footer__logo"
-          />
-        </figure>
-        <div class="footer__social--list">
-            <a href="#" class="
-            footer__links
-            liver__hover-effect
-            liver__hover-effect--white
-            ">Linkedin</a>
-            <a href="#" class="
-            footer__links
-            liver__hover-effect
-            liver__hover-effect--white
-            ">GitHub</a>
-            <a href="#" class="
-            footer__links
-            liver__hover-effect
-            liver__hover-effect--white
-            ">Email</a>
-            <a href="#" class="
-            footer__links
-            liver__hover-effect
-            liver__hover-effect--white
-            ">Resume</a>
-      </div>
-        <h4 class="footer__name">Daryl Deogracias</h4>
-    </div>
+          <figure class="footer-img">
+            <img
+              src="./assets/DOX__2_-removebg-preview.png"
+              alt=""
+              class="footer__logo"
+            />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__links liver__hover-effect liver__hover-effect--white"
+              >Linkedin</a
+            >
+            <a
+              href="#"
+              class="footer__links liver__hover-effect liver__hover-effect--white"
+              >GitHub</a
+            >
+            <a
+              href="#"
+              class="footer__links liver__hover-effect liver__hover-effect--white"
+              >Email</a
+            >
+            <a
+              href="#"
+              class="footer__links liver__hover-effect liver__hover-effect--white"
+              >Resume</a
+            >
+          </div>
+          <h4 class="footer__name">Daryl Deogracias</h4>
+        </div>
       </div>
     </footer>
   </body>
