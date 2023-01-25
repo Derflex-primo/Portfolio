@@ -8,6 +8,10 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
 
@@ -26,6 +30,7 @@ li, a {
 
 section {
     border-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 input, textarea {
@@ -123,11 +128,6 @@ button {
     transition: all 400ms ease;
 }
 
-.modal--open .modal{
-    z-index: 60;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
-    visibility: visible;
-}
 
 /*
 
@@ -154,11 +154,11 @@ nav {
     padding: 0 20px;
 }
 
-.landing__list {
+.nav__link--list {
     display: flex;
 }
 
-.landing__link {
+.nav__link {
     margin: 0 12px;
 }
 
@@ -171,6 +171,54 @@ nav {
 .fa-adjust {
     font-size: 20px;
 }
+
+nav, 
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms ease;
+}
+
+.modal--open nav, 
+.modal--open .scroll,
+.modal--open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms ease;
+}
+
+ 
+
+.dark-theme .title1,
+.dark-theme .header__title1,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para,
+.dark-theme .section__title,
+.dark-theme  .testimonial__sub--title,
+.dark-theme .tes1,
+.dark-theme .tes-sub,
+.dark-theme .section__icon {
+    color: #f8f8f8;
+}
+
+.dark-theme section {
+    background-color: #242424;
+}
+
+.dark-theme .scroll__icon {
+    border-color: #f8f8f8;
+  }
+  .dark-theme .scroll__icon:after,
+  .dark-theme .link__hover-effect--black:after {
+    background-color: #f8f8f8;
+  }
+  .dark-theme .mail__btn {
+    background-color: #f8f8f8;
+    color: #242424;
+  }
 
 /*
 
@@ -197,8 +245,13 @@ LANDING DEO
 .header__title1 {
     font-size: 30px;
     font-weight: 500;
+    color: #242424;
 }
 
+.title1 {
+    color: #242424;
+    font-weight: 500;
+}
 .header__para {
     line-height: 2;
     max-width: 600px;
@@ -212,7 +265,7 @@ LANDING DEO
 
 
 .social__link {
-    background-color: #242424;
+    background-color: #a848c5;
     color: #f8f8f8;
     margin-right: 12px;
     padding: 6px;
@@ -289,8 +342,17 @@ LANDING DEO
     filter: grayscale(100%) contrast(120%);
     transition: all 500ms ease;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+    
     }
 
+.dark-theme .piclogo {
+    visibility: hidden;
+    transition: visibilty 1s;
+    transform: translateY(110%);
+}
+
+ 
 
     
     
@@ -302,7 +364,7 @@ LANDING DEO
     width: 100%;
     max-width: 1000px;
     padding: 0 30px; 
-    
+    transition: all 400ms ease;
 }
  
 
@@ -321,12 +383,23 @@ MODAL DEO
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
+    max-width: 1100px;
     height: 700px;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     visibility: hidden;
-}
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+  }
+  .modal--open .modal{
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+  }
+
+
+
 
 .modal__half {
     width: 50%;
@@ -335,18 +408,29 @@ MODAL DEO
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 300ms ease-in;
    
 }
+.modal--open .modal__about,
+.modal--open .modal__contact {
+    transform: translate(0%);
+}
+
 
  
 .modal__about {
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
 }
+
 
 .modal__languages {
     display: flex;
     flex-wrap: wrap;
 }
+
+
+
 
 .modal__language {
     width: 25%;
@@ -381,6 +465,7 @@ MODAL DEO
 .modal__contact {
     background-color: #242424;
     color: #f8f8f8;
+    transform: translateX(110%);
 }
 
 .modal__title {
@@ -434,7 +519,7 @@ MODAL DEO
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -443,6 +528,7 @@ MODAL DEO
 
 .modal__overlay--visible {
     z-index: 1;
+    display: flex;
 }
 
 
@@ -600,8 +686,9 @@ TESTIMONIALS DEO
 */
 
 
+
 #testimonials {
-    margin-bottom: 100px;
+    position: relative;
 }
 
 .testimonial__title {
@@ -609,6 +696,7 @@ TESTIMONIALS DEO
     text-align: center;
     font-size: 38px;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .testimonial__sub--title {
@@ -623,7 +711,7 @@ TESTIMONIALS DEO
     margin: 0 auto;
     width: 1000px;
     height: 400px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(97, 52, 98, 0.25) 0px 50px 100px -20px, rgba(89, 46, 86, 0.3) 0px 30px 60px -30px, rgba(61, 10, 64, 0.35) 0px -2px 6px 0px inset;
     overflow: hidden;
     border-radius: 30px;
      
@@ -687,6 +775,7 @@ FOOTER DEO
  
 
 footer {
+    position: relative;
     background-color: #242424;
     display: flex;
     padding: 6% 0;
@@ -744,3 +833,104 @@ footer {
     transition: 0.5s;
   
 }
+
+/*
+
+
+SHAPES DEO
+
+
+*/
+
+.shape {
+    position: fixed;
+  }
+  .shape--0 {
+    top: 15vh;
+    left: 5vw;
+  }
+  .shape--1 {
+    top: 15vh;
+    left: 50vw;
+  }
+  .shape--2 {
+    top: 15vh;
+    left: 80vw;
+  }
+  .shape--3 {
+    top: 50vh;
+    left: 5vw;
+  }
+  .shape--4 {
+    top: 50vh;
+    left: 50vw;
+  }
+  .shape--5 {
+    top: 50vh;
+    left: 80vw;
+  }
+  .shape--6 {
+    top: 80vh;
+    left: 5vw;
+  }
+  .shape--7 {
+    top: 80vh;
+    left: 50vw;
+  }
+  .shape--8 {
+    top: 80vh;
+    left: 80vw;
+  }
+
+
+
+
+  /* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+    .title {
+      font-size: 80px;
+    }
+    .header__para {
+      font-size: 20px;
+    }
+    .modal {
+      top: 0;
+      left: 0;
+      transform: none;
+      height: auto;
+      width: 100%;
+      flex-direction: column-reverse;
+      border-radius: 0;
+    }
+    .modal__half {
+      width: 100%;
+    }
+  }
+  
+  /* Small phones */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 52px;
+    }
+    .header__para {
+      font-size: 18px;
+    }
+    .nav__link:first-child {
+      display: none;
+    }
+    .project__description--para {
+      display: none;
+    }
+    .project__description {
+      left: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .project__description--sub-title {
+      margin-bottom: 8px;
+    }
+    .modal__half {
+      padding: 40px;
+    }
+  }

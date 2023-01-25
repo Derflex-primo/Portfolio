@@ -25,10 +25,10 @@
    })();
    </script>
   </head>
-  <body>
+  <body >
     <!--LANDING-->
 
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav class="landing__page">
         <figure class="landing__logo">
           <img
@@ -37,48 +37,48 @@
             alt=""
           />
         </figure>
-        <ul class="landing__list">
-          <li class="landing__link">
-            <a
-              href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >About</a
-            >
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a href="#" class="
+              nav__link--anchor
+              link__hover-effect
+              link__hover-effect--black
+            ">About</a>
           </li>
-          <li class="landing__link">
-            <a
-              href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Projects</a
-            >
+          <li class="nav__link">
+            <a href="#projects" class="
+              nav__link--anchor
+              link__hover-effect
+              link__hover-effect--black
+            ">Projects</a>
           </li>
-          <li class="landing__link">
-            <a
-              href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Contact</a
-            >
+          <li class="nav__link" onclick="toggleModal()">
+            <a href="#" class="
+              nav__link--anchor
+              link__hover-effect
+              link__hover-effect--black
+            ">Contact</a>
           </li>
-          <li class="landing__link">
-            <a
-              href=""
-              class="nav__link--anchor liver__hover-effect link__hover-effect--black"
-              ><i class="fa-solid fa-circle-half-stroke"></i
-            ></a>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a href="#" class="
+              liver__hover-effect 
+              nav__link--anchor
+              link__hover-effect--black
+            "><i class="fas fa-adjust"></i></a>
           </li>
         </ul>
       </nav>
       <header class="header">
         <div class="header__content">
-          <h3 class="header__title1 text-color">Buenas dias</h3>
-          <h1 class="title header__title">I'm Daryl</h1>
-          <h1 class="title1 header__title text-color">Frontend Developer.</h1>
+          <h3 class="header__title1">Buenas dias</h3>
+          <h1 class="title header__title text-color">I'm Daryl</h1>
+          <h1 class="title1 header__title ">Frontend Developer.</h1>
           <p class="header__para">
             I possess a strong background in designing and developing visually
             stunning, intuitive, and responsive websites that deliver optimal
             user experiences.
             <br />
-            Here's a bit <b class="text-color">About me.</b>
+            Here's a bit <b class="text-color click" onclick="toggleModal()">About me.</b>
           </p>
         </div>
         <div class="social__list">
@@ -105,14 +105,14 @@
         </figure>
       </header>
       <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <i class="fas fa-envelope" ></i>
       </button>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
       <div class="modal">
         <div class="modal__half modal__about">
-          <h3 class="modal__title modal__title--about">Here's a bit About me</h3>
+          <h3 class="modal__title modal__title--about" >Here's a bit About me</h3>
           <h4 class="modal__sub-title modal__sub--title">Frontend Sofware Developer</h4>
           <p class="modal__para">
             A Young individual who developed
@@ -146,24 +146,25 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">
             Let's have a chat!
           </h3>
           <h4 class="modal__sub--title modal__sub-title--contact">
             I Love to hear from You
           </h4>
-          <form action="" id="contact__form" onsubmit="contact(event)">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label   class="form__item--label">Name</label>
-              <input type="text" name="user_name" class="input"  required></input> 
+              <input type="text"   name="user__name" class="input"   required></input> 
             </div>
             <div class="form__item">
               <label  class="form__item--label">Email</label>
-              <input type="email" name="user_email" class="input"  required></input>
+              <input type="email"  name="user__email" class="input"  required></input>
             </div>
             <div class="form__item">
               <label   class="form__item--label">Message</label>
-              <textarea type="text" name="message" class="input"  required></textarea>
+              <textarea type="text"  name="message" class="input"   required></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
               Send
@@ -176,8 +177,16 @@
             It's a pleasure! Looking forward to speaking to you soon.
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0">
+      <img src="./assets/circle.svg" class="shape shape--1">
+      <img src="./assets/squiggly.svg" class="shape shape--2">
+      <img src="./assets/circle.svg" class="shape shape--3">
+      <img src="./assets/triangle.svg" class="shape shape--4">
+      <img src="./assets/circle.svg" class="shape shape--5">
+      <img src="./assets/squiggly.svg" class="shape shape--6">
+      <img src="./assets/circle.svg" class="shape shape--7">
+      <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
 
     <!--PROJECTS-->
@@ -288,7 +297,7 @@
                   <b class="text-color">David Bragg</b>
                 </h4>
                 <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
+                <div class="tes__rating">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -501,6 +510,8 @@
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     </section>
+    
+    <!--FOOTER -->
     <footer>
       <div class="container footer__container">
         <div class="row footer__row">
