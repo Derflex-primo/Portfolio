@@ -354,10 +354,10 @@ LANDING DEO
   height: 6px;
   background-color: #242424;
   border-radius: 2px;
-  animation: scroll 1000ms infinite alternate-reverse;
+  animation: scrolll 1000ms infinite alternate-reverse;
 }
 
-@keyframes scroll {
+@keyframes scrolll {
   0% {
     transform: translateY(3px);
   }
@@ -406,16 +406,27 @@ LANDING DEO
   
 }
 
+@keyframes scroll { 
+  100% {
+    transform: translateX(-100%);
+  }
+}
+  
+
+
 
 .cloud-layer {
   position: absolute;
   inset: 0;
   background-size: 50% 50%;
-  animation: 15s scroll linear infinite;
+  animation: 15s scroll linear infinite ;
+  transition: all 300ms ease-in;
 }
 
 .cloud-layer + .cloud-layer {
-  animation: 30s scroll linear infinite;
+  animation: 30s scroll linear infinite ;
+  transition: all 300ms ease-in;
+
 }
 
 .window {
