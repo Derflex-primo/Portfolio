@@ -391,9 +391,9 @@ LANDING DEO
 
 .window {
   position: fixed;
-  border-radius: min(20vh, 20vw);
-  height: min(40vh, 40vw);
-  width: min(40vh, 40vw);
+  border-radius: min(30vh, 30vw);
+  height: min(50vh, 50vw);
+  width: min(50vh, 50vw);
   background-color: rgb(233, 135, 235);
   overflow: hidden;
   box-shadow: 0 0 min(10vh, 10vw) rgb(232, 135, 235);
@@ -1022,7 +1022,6 @@ SHAPES DEO
   }
   
   /* Small phones */
-  
   @media (max-width: 480px) {
     .title {
       font-size: 52px;
