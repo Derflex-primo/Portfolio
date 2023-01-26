@@ -320,22 +320,51 @@ LANDING DEO
 }
 
 .scroll__icon {
-    width: 20px;
-    height: 30px;
-    border: 2px solid #242424;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 20px;
+  height: 30px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll__icon:after {
-    content: "";
-    width: 4px;
-    height: 6px;
-    background-color: #242424;
-    border-radius: 2px;
-    
+  content: "";
+  width: 4px;
+  height: 6px;
+  background-color: #242424;
+  border-radius: 2px;
+  animation: scroll 1000ms infinite alternate-reverse;
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 30px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll__icon:after {
+  content: "";
+  width: 4px;
+  height: 6px;
+  background-color: #242424;
+  border-radius: 2px;
+  animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(3px);
+  }
+  
+  100% {
+    transform: translateY(-3px);
+  }
 }
 
  
@@ -413,10 +442,7 @@ LANDING DEO
   clip-path: polygon(50% 36.25%, 40% 25%, 35% 25%, 40% 37.5%);
 }
 
-@keyframes scroll {
-  0% { background-position: center left 0%; }
-  100% { background-position: center left 200%; }
-}
+ 
 
 .plane {
   visibility: hidden;
