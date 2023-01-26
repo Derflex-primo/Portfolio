@@ -86,6 +86,7 @@ button {
   margin-bottom: 12px;
   text-align-last: left;
   line-height: 1;
+  animation: fade-up 650ms 600ms backwards;
 }
 
 .title1 {
@@ -188,7 +189,7 @@ nav,
     transition: all 400ms ease;
 }
 
- 
+tes__rating
 
 .dark-theme .title1,
 .dark-theme .header__title1,
@@ -197,10 +198,11 @@ nav,
 .dark-theme .fa-circle-half-stroke,
 .dark-theme .header__para,
 .dark-theme .section__title,
-.dark-theme  .testimonial__sub--title,
-.dark-theme .tes1,
+.dark-theme .testimonial__sub--title,
+.dark-theme .section__icon,
+.dark-theme .starr,
 .dark-theme .tes-sub,
-.dark-theme .section__icon {
+.dark-theme .header__titlee {
     color: #f8f8f8;
 }
 
@@ -230,6 +232,8 @@ LANDING DEO
 
 #landing-page {
     min-height: 100vh;
+    animation: fade-in 650ms 600ms backwards;
+    
 }
 
 .header {
@@ -240,6 +244,7 @@ LANDING DEO
     width: 100%;
     max-width: 1000px;
     padding: 0 30px;
+    
 }
 
 .header__title1 {
@@ -248,18 +253,29 @@ LANDING DEO
     color: #242424;
 }
 
+ 
+
 .title1 {
     color: #242424;
     font-weight: 500;
+     
 }
 .header__para {
     line-height: 2;
     max-width: 600px;
 }
 
+.header__content {
+  animation: fade-in 650ms 600ms backwards;
+}
+
+
+
+
 .social__list {
     margin-top: 16px;
     display: flex;
+    
 }
 
 
@@ -276,6 +292,8 @@ LANDING DEO
     display: flex;
     justify-content: center;
     align-items: center; 
+    animation: fade-in 650ms 600ms backwards;
+
 }
 
 .mail__btn {
@@ -317,17 +335,10 @@ LANDING DEO
     height: 6px;
     background-color: #242424;
     border-radius: 2px;
-    animation: scroll 1000ms infinite alternate-reverse;
+    
 }
 
-@keyframes scroll  {
-  0% {
-    transform: translateY(3px)
-  }    
-  100% {
-    transform: translateY(-3px)
-  }   
-}
+ 
 
 .piclogo:hover {
     filter: none;
@@ -335,6 +346,7 @@ LANDING DEO
      
 }
  
+
 .piclogo {
     width: 400px;
     height: 400px;
@@ -342,19 +354,76 @@ LANDING DEO
     filter: grayscale(100%) contrast(120%);
     transition: all 500ms ease;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  
+    animation: fade-in 650ms 600ms backwards;
     
     }
 
 .dark-theme .piclogo {
     visibility: hidden;
     transition: visibilty 1s;
-    transform: translateY(110%);
+    transform: translateX(-110%);
 }
 
- 
+.dark-theme .plane  {
+  visibility: visible;
+  position:absolute;
+  top: -5%;
+  left: 110%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 30px; 
+  transition: all 300ms ease;
+  
+}
 
-    
+
+.cloud-layer {
+  position: absolute;
+  inset: 0;
+  background-size: 50% 50%;
+  animation: 15s scroll linear infinite;
+}
+
+.cloud-layer + .cloud-layer {
+  animation: 30s scroll linear infinite;
+}
+
+.window {
+  position: fixed;
+  border-radius: min(20vh, 20vw);
+  height: min(40vh, 40vw);
+  width: min(40vh, 40vw);
+  background-color: rgb(233, 135, 235);
+  overflow: hidden;
+  box-shadow: 0 0 min(10vh, 10vw) rgb(232, 135, 235);
+}
+
+.wing {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(70deg, hsl(0deg, 0%, 98%) 49.75%, hsl(0deg, 0%, 50%) 50%, hsl(0deg, 0%, 50%) 50.5%, hsl(0deg, 0%, 100%) 50.75%);
+  clip-path: polygon(100% 60%, 50% 36.25%, 38.75% 25%, 35% 25%, 40% 37.5%, 37.5% 50%, 20% 80%, 0% 100%, 100% 100%);
+}
+
+.accent {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(208, 31, 184);
+  clip-path: polygon(50% 36.25%, 40% 25%, 35% 25%, 40% 37.5%);
+}
+
+@keyframes scroll {
+  0% { background-position: center left 0%; }
+  100% { background-position: center left 200%; }
+}
+
+.plane {
+  visibility: hidden;
+  transition: visibilty 1s;
+  transform: translateX(-110%);
+}
+
     
 .piclogo1 {
     position:absolute;
@@ -365,7 +434,33 @@ LANDING DEO
     max-width: 1000px;
     padding: 0 30px; 
     transition: all 400ms ease;
+    
 }
+
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
  
 
 /*
@@ -586,10 +681,12 @@ PROJECTS DEO
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade-up 650ms 600ms backwards;
 }
 
 .project__list {
     padding: 0;
+    animation: slidein 800ms ease-in-out forwards
      
 }
 
@@ -711,7 +808,10 @@ TESTIMONIALS DEO
     margin: 0 auto;
     width: 1000px;
     height: 400px;
-    box-shadow: rgba(97, 52, 98, 0.25) 0px 50px 100px -20px, rgba(89, 46, 86, 0.3) 0px 30px 60px -30px, rgba(61, 10, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: 
+     rgba(97, 52, 98, 0.25) 0px 50px 100px -20px,
+     rgba(89, 46, 86, 0.3) 0px 30px 60px -30px, 
+     rgba(61, 10, 64, 0.35) 0px -2px 6px 0px inset;
     overflow: hidden;
     border-radius: 30px;
      
@@ -885,7 +985,8 @@ SHAPES DEO
 
 
 
-  /* Small phones, tablets, large smart phones */
+/* Small phones, tablets, large smart phones */
+
 @media (max-width: 768px) {
     .title {
       font-size: 80px;
@@ -905,9 +1006,23 @@ SHAPES DEO
     .modal__half {
       width: 100%;
     }
+
+    .piclogo {
+       display: none;   
+    }
+
+    .plane {
+      display: none;
+     
+    }
+
+    #testimonials {
+      display: none;
+    }
   }
   
   /* Small phones */
+  
   @media (max-width: 480px) {
     .title {
       font-size: 52px;
@@ -934,3 +1049,8 @@ SHAPES DEO
       padding: 40px;
     }
   }
+
+
+
+
+  

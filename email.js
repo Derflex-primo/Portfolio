@@ -1,5 +1,3 @@
-
-
 let contrastToggle = false;
 
  function toggleContrast() {
@@ -20,12 +18,13 @@ function contact(event) {
     const loading = document.querySelector(".modal__overlay--loading");
     const success = document.querySelector(".modal__overlay--success");
     loading.classList += " modal__overlay--visible";
-    emailjs
-      .sendForm(
-        "service_mhlv03l",
+    
+    
+    emailjs.sendForm(
+        "service_ucmw98d",
         "template_tcjaere",
         event.target,
-        "user_I3mTYfDDoKcfMkFaN"
+        "I3mTYfDDoKcfMkFaN"
       )
       .then(() => {
         loading.classList.remove("modal__overlay--visible");
