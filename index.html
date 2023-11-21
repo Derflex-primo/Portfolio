@@ -12,6 +12,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./email.js" defer></script>
     <script src="./signatureDeo.js" defer></script>
     <script
       src="https://kit.fontawesome.com/87aa5e9b00.js"
@@ -25,7 +26,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script src="./email.js" defer></script>
     <script type="text/javascript">
       (function () {
         emailjs.init("I3mTYfDDoKcfMkFaN");
@@ -74,13 +74,17 @@
         </ul>
       </nav>
 
-      <audio id="audioPlayer" src="./assets/funk-it-49967.mp3"  type="audio/mpeg"></audio>
+      <audio
+        id="audioPlayer"
+        src="./assets/funk-it-49967.mp3"
+        type="audio/mpeg"
+      ></audio>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           // Get the audio element and link element
           var audio = document.getElementById("audioPlayer");
           var audioLink = document.getElementById("audioLink");
-    
+
           // Add a click event listener to the link
           audioLink.addEventListener("click", function () {
             // Check if the audio is paused, then play it; otherwise, pause it
@@ -93,7 +97,7 @@
           });
         });
       </script>
-      
+
       <header class="header">
         <div class="header__content">
           <h3 class="header__title1">Buenas dias</h3>
@@ -154,24 +158,86 @@
           <h3 class="modal__title modal__title--about">
             Here's a bit About me
           </h3>
-          <h4 class="modal__sub-title modal__sub--title">
-            Frontend Sofware Developer
-          </h4>
+          <h4 class="modal__sub-title modal__sub--title">Frontend Developer</h4>
           <p class="modal__para">
-            A Young individual who developed
+            A young individual who developed
             <b class="text-color">
               visually stunning, intuitive, and responsive websites
             </b>
-            that deliver optimal
-            <b class="text-color">user experience.</b>
+            that deliver optimal user experience.
             <br />
-            I currently work on extremely difficult engineering problems and
-            learn from a team consisting of some of the most
-            <b class="text-color">talented </b>
+            I am currently engaged in solving highly challenging engineering
+            problems and have the opportunity to learn from a team composed of
+            some of the most
+            <b class="text-color">skilled </b>
             and <b class="text-color">experienced</b>
-            software engineers every day.
+            software engineers on a daily basis.
           </p>
           <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/jsscrpit.webp"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/typescript.svg"
+                alt=""
+              />
+              <span class="language__name">Typescript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/next-js.svg"
+                alt=""
+              />
+              <span class="language__name">Next.js</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/git-icon-logo-svgrepo-com.svg"
+                alt=""
+              />
+              <span class="language__name">Git</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/react.webp"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/firebase-svgrepo-com.svg"
+                alt=""
+              />
+              <span class="language__name">Firebase</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img x"
+                src="./assets/tailwindcss.svg"
+                alt=""
+              />
+              <span class="language__name">Tailwind</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img x"
+                src="./assets/getpostman-icon.svg"
+                alt=""
+              />
+              <span class="language__name">Postman</span>
+            </figure>
             <figure class="modal__language">
               <img class="modal__language--img" src="./assets/CSS.png" alt="" />
               <span class="language__name">HTML</span>
@@ -184,22 +250,6 @@
               />
               <span class="language__name">CSS</span>
             </figure>
-            <figure class="modal__language">
-              <img
-                class="modal__language--img"
-                src="./assets/jsscrpit.webp"
-                alt=""
-              />
-              <span class="language__name">JavaScript</span>
-            </figure>
-            <figure class="modal__language">
-              <img
-                class="modal__language--img"
-                src="./assets/react.webp"
-                alt=""
-              />
-              <span class="language__name">React</span>
-            </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
@@ -208,26 +258,27 @@
           <h4 class="modal__sub--title modal__sub-title--contact">
             I Love to hear from You
           </h4>
-          <form id="contact__form" onsubmit="contact(event)">
+          <form
+            id="contact__form"
+            onsubmit="sendMailAndShowOverlay(); return false;"
+          >
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input type="text" name="user_name" class="input" required />
+              <input type="text" id="name" class="input" required />
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input type="email" name="user_email" class="input" required />
+              <input type="email" id="email" class="input" required />
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
-              <textarea
-                type="text"
-                name="message"
-                class="input"
-                required
-              ></textarea>
+              <textarea id="message" class="input" required></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">Send</button>
+            <button id="contact__submit" class="form__submit" type="submit">
+              Send
+            </button>
           </form>
+
           <div class="modal__overlay modal__overlay--loading">
             <img
               class="planetload planet-spinner"
@@ -236,7 +287,8 @@
             />
           </div>
           <div class="modal__overlay modal__overlay--success">
-            It's a pleasure! Looking forward to speaking to you soon.
+            It's a pleasure! Thank you for the opportunity. I'm eagerly looking
+            forward to our upcoming conversation.
           </div>
         </div>
       </div>
@@ -252,33 +304,32 @@
           <ul class="project__list">
             <li class="project">
               <div class="project__wrapper">
-                <img
-                  src="./assets/blinker mockup.png"
-                  class="project__img"
-                  alt=""
-                />
+                <img src="./assets/tierOne.jpeg" class="project__img" alt="" />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h3 class="project__description--title">
+                    T1er One Marketplace
+                  </h3>
                   <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript, React
+                    React, Next.js, Tailwind, Typescript, Firebase, Axios
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eos sint, ad, debitis, mollitia quae a laborum natus ex non
-                    cum dolore? Accusamus incidunt, vel quos iste magni
-                    distinctio dolor delectus.
+                    T1er One: E-Marketplace for gadget enthusiasts. Buy, sell,
+                    and trade the latest tech with ease. Elevate your tech
+                    lifestyle.
                   </p>
                   <div class="project__description--links">
                     <a
-                      href="https://github.com/Derflex-primo"
+                      href="https://github.com/Derflex-primo/T1er-one-marketplace"
                       class="project__description--link"
+                      target="_blank"
                     >
                       <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
                     <a
-                      href="https://github.com/Derflex-primo"
+                      href="https://t1er-one-marketplace.vercel.app"
                       class="project__description--link"
+                      target="_blank"
                     >
                       <i class="fas fa-link" aria-hidden="true"></i>
                     </a>
@@ -286,32 +337,34 @@
                 </div>
               </div>
             </li>
-
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/chat.png" class="project__img" alt="" />
+                <img src="./assets/nfts.jpeg" class="project__img" alt="" />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Chat Black Apple</h3>
+                  <h3 class="project__description--title">
+                    NFT's Marketplace2.0
+                  </h3>
                   <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript, React
+                    React, Next.js, Tailwind, Typescript, Firebase, Reservoir
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eos sint, ad, debitis, mollitia quae a laborum natus ex non
-                    cum dolore? Accusamus incidunt, vel quos iste magni
-                    distinctio dolor delectus.
+                    About The NFT marketplace is a digital platform leveraging
+                    the power of Reservoir Tools to facilitate the buying,
+                    selling, and trading of non-fungible tokens (NFTs).
                   </p>
                   <div class="project__description--links">
                     <a
-                      href="https://github.com/Derflex-primo"
+                      href="https://github.com/Derflex-primo/NFT-marketplace2.0"
                       class="project__description--link"
+                      target="_blank"
                     >
                       <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
                     <a
-                      href="https://github.com/Derflex-primo"
+                      href="https://nft-marketplace2-0.vercel.app/"
                       class="project__description--link"
+                      target="_blank"
                     >
                       <i class="fas fa-link" aria-hidden="true"></i>
                     </a>

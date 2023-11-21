@@ -97,6 +97,7 @@ button {
   margin-bottom: 12px;
   text-align-last: left;
   line-height: 1;
+  padding-left: 6px;
 }
 
 .click {
@@ -201,10 +202,10 @@ nav,
 .dark-theme .section__icon,
 .dark-theme .starr,
 .dark-theme .tes-sub,
-.dark-theme .header__titlee ,
+.dark-theme .header__titlee,
 .dark-theme .tes_icon,
 .dark-theme .tes_linkdn,
-.dark-theme .swiper-slide{
+.dark-theme .swiper-slide {
   color: #f8f8f8;
 }
 
@@ -252,15 +253,18 @@ LANDING DEO
   font-size: 30px;
   font-weight: 500;
   color: #242424;
+  padding-left: 7px;
 }
 
 .title1 {
   color: #242424;
   font-weight: 500;
 }
+
 .header__para {
   line-height: 2;
   max-width: 600px;
+  padding-left: 9px;
 }
 
 .header__content {
@@ -270,6 +274,7 @@ LANDING DEO
 .social__list {
   margin-top: 16px;
   display: flex;
+  padding-left: 9px;
 }
 
 .social__link {
@@ -356,7 +361,6 @@ LANDING DEO
     transform: translateY(-3px);
   }
 }
-
 
 .piclogo {
   width: 400px;
@@ -542,12 +546,13 @@ MODAL DEO
 }
 
 .modal__language {
-  width: 25%;
+  width: 20%;
   padding: 16px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: all 300ms ease;
 }
 
@@ -640,7 +645,7 @@ MODAL DEO
   background-color: #1ac940;
   font-size: 40px;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   padding: 60px;
 }
 
@@ -711,7 +716,6 @@ PROJECTS DEO
 
 .project:hover .project__img {
   transform: scale(1.07);
-  filter: blur(5px);
 }
 
 .project__wrapper {
@@ -719,6 +723,7 @@ PROJECTS DEO
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
+  background-color: #8f4aa4;
 }
 
 .project__wrapper:hover .project__description {
@@ -728,7 +733,6 @@ PROJECTS DEO
 
 .project__wrapper:hover .project__img {
   transform: scale(1.07);
-  filter: blur(5px);
 }
 
 .project__description {
@@ -765,6 +769,7 @@ PROJECTS DEO
 
 .project__description--sub-title {
   margin-top: 8px;
+  font-weight: 400;
 }
 
 .project__description--link {
@@ -1146,7 +1151,6 @@ SHAPES DEO
     flex-direction: row;
     margin-right: 26px;
   }
- 
 
   .test_piclogo {
     width: 40px;
@@ -1201,7 +1205,7 @@ SHAPES DEO
     margin-bottom: 8px;
     margin-top: 18px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 400;
   }
   .project {
     margin-bottom: 20px; /* Adjust the margin as needed */
@@ -1252,7 +1256,7 @@ SHAPES DEO
   }
 
   .tes_linkdn {
-    color:  #494d4a;
+    color: #494d4a;
     z-index: 1000;
   }
 
@@ -1305,5 +1309,4 @@ SHAPES DEO
     width: 40px;
     height: 40px;
   }
-
 }
