@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOX</title>
-    <link rel="icon" href="./assets/DOX__3_-removebg-preview.ico" style="font-size: 100px;" type="image/x-icon">
+    <link
+      rel="icon"
+      href="./assets/DOX__3_-removebg-preview.ico"
+      style="font-size: 100px"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./signatureDeo.js" defer></script>
     <script
@@ -16,17 +21,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-   </script>
-   <script src="./email.js" defer></script>
-   <script type="text/javascript">
-   (function(){
-      emailjs.init("I3mTYfDDoKcfMkFaN");
-   })();
-   </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="./email.js" defer></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("I3mTYfDDoKcfMkFaN");
+      })();
+    </script>
   </head>
-  <body >
+  <body>
     <!--LANDING-->
 
     <section id="landing-page" onmousemove="moveBackground(event)">
@@ -40,46 +46,66 @@
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link" onclick="toggleModal()">
-            <a href="#" class="
-              nav__link--anchor
-              link__hover-effect
-              link__hover-effect--black
-            ">About</a>
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
           </li>
           <li class="nav__link">
-            <a href="#projects" class="
-              nav__link--anchor
-              link__hover-effect
-              link__hover-effect--black
-            ">Projects</a>
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
           </li>
           <li class="nav__link" onclick="toggleModal()">
-            <a href="#" class="
-              nav__link--anchor
-              link__hover-effect
-              link__hover-effect--black
-            ">Contact</a>
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
           </li>
-          <li class="nav__link click" onclick="toggleContrast()">
-            <a href="#" class="
-              liver__hover-effect 
-              nav__link--anchor
-              link__hover-effect--black
-            "><i class="fas fa-adjust"></i></a>
+          <li class="nav__link click" onclick=" toggleContrast()">
+            <a href="#" id="audioLink" class="nav__link--anchor"
+              ><i class="fas fa-adjust"></i
+            ></a>
           </li>
         </ul>
       </nav>
+
+      <audio id="audioPlayer" src="./assets/funk-it-49967.mp3"  type="audio/mpeg"></audio>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get the audio element and link element
+          var audio = document.getElementById("audioPlayer");
+          var audioLink = document.getElementById("audioLink");
+    
+          // Add a click event listener to the link
+          audioLink.addEventListener("click", function () {
+            // Check if the audio is paused, then play it; otherwise, pause it
+            if (audio.paused) {
+              audio.play();
+            } else {
+              audio.pause();
+              audio.currentTime = 0;
+            }
+          });
+        });
+      </script>
+      
       <header class="header">
         <div class="header__content">
           <h3 class="header__title1">Buenas dias</h3>
           <h1 class="title header__title text-color">I'm Daryl</h1>
-          <h1 class="title1 header__titlee ">Frontend Developer.</h1>
+          <h1 class="title1 header__titlee">Frontend Developer.</h1>
           <p class="header__para">
             I possess a strong background in designing and developing visually
             stunning, intuitive, and responsive websites that deliver optimal
             user experiences.
             <br />
-            Here's a bit <b class="text-color click" onclick="toggleModal()">About me.</b>
+            Here's a bit
+            <b class="text-color click" onclick="toggleModal()">About me.</b>
           </p>
         </div>
         <div class="social__list">
@@ -101,7 +127,7 @@
             <i class="fa-solid fa-file"></i>
           </a>
         </div>
-         
+
         <figure class="plane">
           <div class="window">
             <div class="cloud-layer"></div>
@@ -111,97 +137,110 @@
             </div>
           </div>
         </figure>
-        <figure class="piclogo1 photo  ">
+        <figure class="piclogo1 photo">
           <img src="./assets/Piclogo.jpg" class="piclogo" alt="" />
         </figure>
       </header>
-      <a href="#"> 
-      <button class="mail__btn click " onclick="toggleModal()">
-        <i class="fas fa-envelope" ></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fas fa-envelope"></i>
+        </button>
       </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
       <div class="modal">
         <div class="modal__half modal__about">
-          <h3 class="modal__title modal__title--about" >Here's a bit About me</h3>
-          <h4 class="modal__sub-title modal__sub--title">Frontend Sofware Developer</h4>
+          <h3 class="modal__title modal__title--about">
+            Here's a bit About me
+          </h3>
+          <h4 class="modal__sub-title modal__sub--title">
+            Frontend Sofware Developer
+          </h4>
           <p class="modal__para">
             A Young individual who developed
-            <b class="text-color"> visually stunning, intuitive, and responsive websites </b>
+            <b class="text-color">
+              visually stunning, intuitive, and responsive websites
+            </b>
             that deliver optimal
             <b class="text-color">user experience.</b>
             <br />
             I currently work on extremely difficult engineering problems and
-            learn from a team consisting of some of the most 
+            learn from a team consisting of some of the most
             <b class="text-color">talented </b>
             and <b class="text-color">experienced</b>
-             software engineers every day.
+            software engineers every day.
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
-              <img class="modal__language--img" src="./assets/CSS.png" alt="">
-               <span class="language__name">HTML</span>
+              <img class="modal__language--img" src="./assets/CSS.png" alt="" />
+              <span class="language__name">HTML</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="./assets/CSS.webp" alt="">
+              <img
+                class="modal__language--img"
+                src="./assets/CSS.webp"
+                alt=""
+              />
               <span class="language__name">CSS</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="./assets/jsscrpit.webp" alt="">
+              <img
+                class="modal__language--img"
+                src="./assets/jsscrpit.webp"
+                alt=""
+              />
               <span class="language__name">JavaScript</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="./assets/react.webp" alt="">
+              <img
+                class="modal__language--img"
+                src="./assets/react.webp"
+                alt=""
+              />
               <span class="language__name">React</span>
             </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
           <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-          <h3 class="modal__title modal__title--contact">
-            Let's have a chat!
-          </h3>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub--title modal__sub-title--contact">
             I Love to hear from You
           </h4>
           <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
-              <label   class="form__item--label">Name</label>
-              <input type="text"   name="user_name" class="input"   required></input> 
+              <label class="form__item--label">Name</label>
+              <input type="text" name="user_name" class="input" required />
             </div>
             <div class="form__item">
-              <label  class="form__item--label">Email</label>
-              <input type="email"  name="user_email" class="input"  required></input>
+              <label class="form__item--label">Email</label>
+              <input type="email" name="user_email" class="input" required />
             </div>
             <div class="form__item">
-              <label   class="form__item--label">Message</label>
-              <textarea type="text"  name="message" class="input"   required></textarea>
+              <label class="form__item--label">Message</label>
+              <textarea
+                type="text"
+                name="message"
+                class="input"
+                required
+              ></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">
-              Send
-            </button>     
+            <button id="contact__submit" class="form__submit">Send</button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
-             <img class="planetload planet-spinner" src="./assets/galaxy.png" alt="">
+            <img
+              class="planetload planet-spinner"
+              src="./assets/galaxy.png"
+              alt=""
+            />
           </div>
           <div class="modal__overlay modal__overlay--success">
             It's a pleasure! Looking forward to speaking to you soon.
           </div>
         </div>
       </div>
-      <img src="./assets/semi circle.svg" class="shape shape--0">
-      <img src="./assets/circle.svg" class="shape shape--1">
-      <img src="./assets/squiggly.svg" class="shape shape--2">
-      <img src="./assets/circle.svg" class="shape shape--3">
-      <img src="./assets/triangle.svg" class="shape shape--4">
-      <img src="./assets/circle.svg" class="shape shape--5">
-      <img src="./assets/squiggly.svg" class="shape shape--6">
-      <img src="./assets/circle.svg" class="shape shape--7">
-      <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
-
     <!--PROJECTS-->
 
     <section id="projects">
@@ -294,236 +333,139 @@
           <h1 class="testimonial__title">
             <span class="text-color"> Testimonials </span>
           </h1>
-          <div class="swiper">
+          <div class="swiper swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
+                <div class="tes_icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="tes__title">
+                  <h3 class="starr test_des">
+                    Daryl quickly understood my needs and proposed a solution in
+                    line with my wishes. He kept me up to date with the
                     development progress by asking my opinion each time. The
                     final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                    and would use his services in the future.
+                  </h3>
+                  <div class="test_capture">
+                    <div class="text_piclogo_wrapper">
+                      <img
+                        src="./assets/david_brag.jpeg"
+                        class="test_piclogo"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <h4 class="starr tes__sub--title">
+                        <b class="text-color">David Bragg</b>
+                        <div class="tes_icons">
+                          <a
+                            href="https://www.linkedin.com/in/david-bragg-5b23a1176/"
+                            target="_blank"
+                            ><i class="fa-brands fa-linkedin tes_linkdn"></i
+                          ></a>
+                        </div>
+                      </h4>
+                      <h5 class="tes-sub">Founder of FES</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
+                <div class="tes_icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="tes__title">
+                  <h3 class="starr test_des">
+                    Daryl quickly understood my needs and proposed a solution in
+                    line with my wishes. He kept me up to date with the
                     development progress by asking my opinion each time. The
                     final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                    and would use his services in the future.
+                  </h3>
+                  <div class="test_capture">
+                    <div class="text_piclogo_wrapper">
+                      <img
+                        src="./assets/david_brag.jpeg"
+                        class="test_piclogo"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <h4 class="starr tes__sub--title">
+                        <b class="text-color">David Bragg</b>
+                        <div class="tes_icons">
+                          <a
+                            href="https://www.linkedin.com/in/david-bragg-5b23a1176/"
+                            target="_blank"
+                            ><i class="fa-brands fa-linkedin tes_linkdn"></i
+                          ></a>
+                        </div>
+                      </h4>
+                      <h5 class="tes-sub">Founder of FES</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="tes_icon">
+                  <i class="fa-solid fa-quote-left"></i>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
+                <div class="tes__title">
+                  <h3 class="starr test_des">
+                    Daryl quickly understood my needs and proposed a solution in
+                    line with my wishes. He kept me up to date with the
                     development progress by asking my opinion each time. The
                     final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h3 class="tes1 starr tes__title">
-                  <em>
-                    "Daryl quickly understood my needs and proposed a solution
-                    in line with my wishes. He kept me up to date with the
-                    development progress by asking my opinion each time. The
-                    final product met my expectations. I highly recommend him
-                    and would use his services in the future."
-                  </em>
-                </h3>
-                <h4 class="tes1 starr tes__sub--title">
-                  <b class="text-color">David Bragg</b>
-                </h4>
-                <h5 class="tes-sub">Founder of FES</h5>
-                <div class="tes1 tes__rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                    and would use his services in the future.
+                  </h3>
+                  <div class="test_capture">
+                    <div class="text_piclogo_wrapper">
+                      <img
+                        src="./assets/david_brag.jpeg"
+                        class="test_piclogo"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <h4 class="starr tes__sub--title">
+                        <b class="text-color">David Bragg</b>
+                        <div class="tes_icons">
+                          <a
+                            href="https://www.linkedin.com/in/david-bragg-5b23a1176/"
+                            target="_blank"
+                            ><i class="fa-brands fa-linkedin tes_linkdn"></i
+                          ></a>
+                        </div>
+                      </h4>
+                      <h5 class="tes-sub">Founder of FES</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
+            <div class="swiper-button-next swiper-button-black"></div>
+            <div class="swiper-button-prev swiper-button-black"></div>
           </div>
         </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: false,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
     </section>
-    
+
     <!--FOOTER -->
     <footer>
       <div class="container footer__container">
@@ -538,22 +480,22 @@
           <div class="footer__social--list">
             <a
               href="https://www.linkedin.com/in/daryl-deogracias-3b82a5261/"
-              class="footer__links liver__hover-effect liver__hover-effect--white"
+              class="footer__links link__hover-effect link__hover-effect--black"
               >Linkedin</a
             >
             <a
               href="https://github.com/Derflex-primo"
-              class="footer__links liver__hover-effect liver__hover-effect--white"
+              class="footer__links link__hover-effect link__hover-effect--black"
               >GitHub</a
             >
             <a
               href="dryldeogracias@gmai.com"
-              class="footer__links liver__hover-effect liver__hover-effect--white"
+              class="footer__links link__hover-effect link__hover-effect--black"
               >Email</a
             >
             <a
               href="#"
-              class="footer__links liver__hover-effect liver__hover-effect--white"
+              class="footer__links link__hover-effect link__hover-effect--black"
               >Resume</a
             >
           </div>
