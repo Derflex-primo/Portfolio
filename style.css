@@ -90,6 +90,7 @@ button {
   text-align-last: left;
   line-height: 1;
   animation: fade-up 650ms 600ms backwards;
+  cursor: default;
 }
 
 .title1 {
@@ -98,6 +99,7 @@ button {
   text-align-last: left;
   line-height: 1;
   padding-left: 6px;
+  cursor: default;
 }
 
 .click {
@@ -254,17 +256,21 @@ LANDING DEO
   font-weight: 500;
   color: #242424;
   padding-left: 7px;
+  cursor: default;
 }
 
 .title1 {
   color: #242424;
   font-weight: 500;
+  cursor: default;
 }
 
 .header__para {
   line-height: 2;
+  font-size: 24px;
   max-width: 600px;
   padding-left: 9px;
+  cursor: default;
 }
 
 .header__content {
@@ -723,7 +729,7 @@ PROJECTS DEO
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
-  background-color: #8f4aa4;
+  background-color: #0b0a0c;
 }
 
 .project__wrapper:hover .project__description {
@@ -959,7 +965,8 @@ footer {
 }
 
 .footer__logo {
-  width: 90px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 .footer__social--list {

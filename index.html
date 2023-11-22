@@ -37,13 +37,9 @@
 
     <section id="landing-page" onmousemove="moveBackground(event)">
       <nav class="landing__page">
-        <figure class="landing__logo">
-          <img
-            class="personal-logo dox"
-            src="./assets/DOX__2_-removebg-preview.png"
-            alt=""
-          />
-        </figure>
+        <figure
+          class="landing__logo link__hover-effect link__hover-effect--black nav__link nav__link--list nav__link--anchor"
+        ></figure>
         <ul class="nav__link--list">
           <li class="nav__link" onclick="toggleModal()">
             <a
@@ -66,7 +62,7 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link click" onclick=" toggleContrast()">
+          <li class="nav__link click" id="btn" onclick=" toggleContrast()">
             <a href="#" id="audioLink" class="nav__link--anchor"
               ><i class="fas fa-adjust"></i
             ></a>
@@ -100,13 +96,12 @@
 
       <header class="header">
         <div class="header__content">
-          <h3 class="header__title1">Buenas dias</h3>
+          <h3 class="title header__title header__titlee">Hey</h3>
           <h1 class="title header__title text-color">I'm Daryl</h1>
-          <h1 class="title1 header__titlee">Frontend Developer.</h1>
           <p class="header__para">
-            I possess a strong background in designing and developing visually
-            stunning, intuitive, and responsive websites that deliver optimal
-            user experiences.
+            I'm a <b class="text-color">Frontend Software Developer </b> with a
+            strong passion for building web applications with great user
+            experiences.
             <br />
             Here's a bit
             <b class="text-color click" onclick="toggleModal()">About me.</b>
@@ -177,14 +172,6 @@
             <figure class="modal__language">
               <img
                 class="modal__language--img"
-                src="./assets/jsscrpit.webp"
-                alt=""
-              />
-              <span class="language__name">JavaScript</span>
-            </figure>
-            <figure class="modal__language">
-              <img
-                class="modal__language--img"
                 src="./assets/typescript.svg"
                 alt=""
               />
@@ -193,10 +180,18 @@
             <figure class="modal__language">
               <img
                 class="modal__language--img"
-                src="./assets/next-js.svg"
+                src="./assets/jsscrpit.webp"
                 alt=""
               />
-              <span class="language__name">Next.js</span>
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/react.webp"
+                alt=""
+              />
+              <span class="language__name">React</span>
             </figure>
             <figure class="modal__language">
               <img
@@ -209,11 +204,12 @@
             <figure class="modal__language">
               <img
                 class="modal__language--img"
-                src="./assets/react.webp"
+                src="./assets/next-js.svg"
                 alt=""
               />
-              <span class="language__name">React</span>
+              <span class="language__name">Next.js</span>
             </figure>
+
             <figure class="modal__language">
               <img
                 class="modal__language--img"
@@ -231,14 +227,6 @@
               <span class="language__name">Tailwind</span>
             </figure>
             <figure class="modal__language">
-              <img
-                class="modal__language--img x"
-                src="./assets/getpostman-icon.svg"
-                alt=""
-              />
-              <span class="language__name">Postman</span>
-            </figure>
-            <figure class="modal__language">
               <img class="modal__language--img" src="./assets/CSS.png" alt="" />
               <span class="language__name">HTML</span>
             </figure>
@@ -249,6 +237,14 @@
                 alt=""
               />
               <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img x"
+                src="./assets/getpostman-icon.svg"
+                alt=""
+              />
+              <span class="language__name">Postman</span>
             </figure>
           </div>
         </div>
@@ -264,11 +260,23 @@
           >
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input type="text" id="name" class="input" required />
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                class="input"
+                required
+              />
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input type="email" id="email" class="input" required />
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                class="input"
+                required
+              />
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
@@ -363,6 +371,113 @@
                     </a>
                     <a
                       href="https://nft-marketplace2-0.vercel.app/"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/carhub.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Carhub Marketplace
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    React, Next.js, Tailwind, Typescript, Imagin studio API
+                  </h4>
+                  <p class="project__description--para">
+                    Discover world's best car showcase application. Our platform
+                    is designed to provide a seamless and enjoyable experience
+                    for both car sellers and buyers.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Derflex-primo/CarHub-Market-place"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://car-hub-market-place.vercel.app/"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/travelapp.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Travel app</h3>
+                  <h4 class="project__description--sub-title">
+                    React, Next.js, Tailwind, Typescript.
+                  </h4>
+                  <p class="project__description--para">
+                    Embark on a visual and experiential journey with our Travel
+                    App. From a captivating hero section that sets the mood to
+                    an information-rich travel guide and feature-packed
+                    exploration, this app is your ideal travel companion.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Derflex-primo/Travel-App"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://travel-app-sigma-five.vercel.app/"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/mflex.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">MFlex Movies</h3>
+                  <h4 class="project__description--sub-title">
+                    React, Next.js, Tailwind, Typescript, The Movie Database
+                    (TMDB) API.
+                  </h4>
+                  <p class="project__description--para">
+                    MFlex Movie App is designed to provide users with a seamless
+                    and enjoyable experience for discovering and exploring
+                    movies. It utilizes The Movie Database (TMDB) API to fetch
+                    movie information, ratings, and other details, ensuring an
+                    up-to-date and comprehensive database.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Derflex-primo/MFlex.app"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://mflex-movies.vercel.app/index.html"
                       class="project__description--link"
                       target="_blank"
                     >
@@ -524,11 +639,9 @@
       <div class="container footer__container">
         <div class="row footer__row">
           <figure class="footer-img">
-            <img
-              src="./assets/DOX__2_-removebg-preview.png"
-              alt=""
-              class="footer__logo"
-            />
+            <a href="#">
+              <img src="./assets/Piclogo.jpg" alt="" class="footer__logo" />
+            </a>
           </figure>
           <div class="footer__social--list">
             <a
@@ -552,7 +665,7 @@
               >Resume</a
             >
           </div>
-          <h4 class="footer__name">Daryl Deogracias</h4>
+          <h4 class="footer__name">Copyright©2021 Daryl Deogracias</h4>
         </div>
       </div>
     </footer>

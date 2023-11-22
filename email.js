@@ -21,8 +21,8 @@ function sendMailAndShowOverlay() {
 
   // Send mail using emailjs
   var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
+    user_name: document.getElementById("name").value,
+    user_email: document.getElementById("email").value,
     message: document.getElementById("message").value,
   };
 
