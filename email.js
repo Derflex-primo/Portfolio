@@ -67,7 +67,22 @@ function toggleModal() {
   isModalOpen = true;
   document.body.classList += " modal--open";
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the audio element and link element
+  var audio = document.getElementById("audioPlayer");
+  var audioLink = document.getElementById("audioLink");
 
+  // Add a click event listener to the link
+  audioLink.addEventListener("click", function () {
+    // Check if the audio is paused, then play it; otherwise, pause it
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
+});
 
 const scaleFactor = 1 / 20;
 

@@ -372,7 +372,6 @@ LANDING DEO
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  filter: grayscale(100%) contrast(120%);
   transition: all 500ms ease;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   animation: fade-in 650ms 600ms backwards;
